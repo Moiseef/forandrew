@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container marketing">
+    {% for el in news %}
+<!-- Articls start-->
+<hr class="featurette-divider">
+<div class="row featurette">
+<div id="textartmy" class="col-md-7">
+<h2 class="featurette-heading">{{ el.title }}&nbsp;<span class="text-muted">{{ el.mutetext }}</span></h2>
+<p class="lead">{{ el.full_text }}</p>
+</div>
+<div class="col-md-5">
+<img src="{{ el.img }}" alt="" class="img-thumbnail">
+</div>
+</div>
+    {% endfor %}
+</div>
+
+{% endblock %}
