@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+{% block content %}
+<h1 class="govno">This is Contact</h1>
+<div class="container marketing">
+<form method="POST">
+    {% csrf_token %}
+    <p>
+        <label>Введите имя</label><br>
+        <input type="text" name="name" value="{{person.name}}" />
+    </p>
+    <p>
+        <label>Введите возраст</label><br>
+        <input type="number" name="age" value="{{person.age}}" />
+    </p>
+    <input type="submit" value="Сохранить" >
+</form>
+</div>
+{% endblock %}
